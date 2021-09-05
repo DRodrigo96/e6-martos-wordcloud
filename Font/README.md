@@ -1,0 +1,1 @@
+Font DINPro-Medium. Recuperado de https://www.cufonfonts.com/font/dinpro-medium

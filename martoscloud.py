@@ -17,9 +17,9 @@ from wordcloud import WordCloud, ImageColorGenerator
 print("Paquetes importados.")
 
 import urllib.request
-link = 'https://raw.githubusercontent.com/DRodrigo96/SomeProjects/master/Martos%20WordCloud/SpeechFile/472121674WalterMartos.txt'
+link = 'https://raw.githubusercontent.com/DRodrigo96/e6-martos-wordcloud/main/SpeechFile/472121674WalterMartos.txt'
 txtFile = urllib.request.urlopen(link)
-
+ministro = str()
 ministro = str()
 for line in txtFile:
     ministro += line.decode()
@@ -83,7 +83,7 @@ print('Palabras sin stopwords:\n\n' + text[-500:])
 # Paso 3: Tipo de letra
 #---------------------------------------------------------------------------------------------
 # Path del font en nuestro ordenador
-fpath = r'C:\Users\RODRIGO\Desktop\54321\5 Fonts\DINPro-Medium_13936.ttf'
+fpath = r'C:\Users\RODRIGO\Desktop\54321\5 Fonts\DINPro\DINPro-Medium_13936.ttf'
 
 # Objeto WordCloud
 wordcloud = WordCloud(
@@ -101,7 +101,7 @@ plt.show()
 #---------------------------------------------------------------------------------------------
 import requests
 from io import BytesIO
-parrotLink = 'https://github.com/DRodrigo96/SomeProjects/raw/master/Martos%20WordCloud/Image/parrot.jpg'
+parrotLink = 'https://raw.githubusercontent.com/DRodrigo96/e6-martos-wordcloud/main/Image/parrot.jpg'
 response = requests.get(parrotLink)
 parrot = Image.open(BytesIO(response.content))
 
